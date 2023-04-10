@@ -1,6 +1,7 @@
 {
+  
   "scripts": {
-    "start": "node /src/app.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon ./src/app.js"
   },
