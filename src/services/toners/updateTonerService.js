@@ -8,6 +8,7 @@ const updateTonerService = async (req) => {
   updateToner.model = toner.model;
   updateToner.quantity = toner.quantity;
   updateToner.printer = toner.printer;
+  updateToner.ubication = toner.ubication;
   await updateToner.save();
   return updateToner.model;
 };
