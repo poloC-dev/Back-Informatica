@@ -21,7 +21,7 @@ const TonerSchema = new Schema({
   ubication:{
     type:String,
     required: [true,"Falta ubicacion"],
-  }
+  },
   created_at: { type: Date, default: new Date() },
 });
 
