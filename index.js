@@ -3,7 +3,12 @@ require("./src/database/db");
 require("dotenv").config();
 const cors = require("cors");
 
-app.use(cors({ origin: "*", credentials: true }));
+app.use(
+  cors({
+    origin: "https://informatica-sanroque.vercel.app/",
+    credentials: true,
+  })
+);
 
 const PORT = process.env.PORT || 8080;
 
