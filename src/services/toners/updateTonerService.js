@@ -1,4 +1,5 @@
 const TonerModel = require("../../models/toners.models");
+const addTonerMovement = require("../../utils/addTonerMovement");
 
 const updateTonerService = async (req) => {
   const { _id } = req.params;
@@ -10,6 +11,8 @@ const updateTonerService = async (req) => {
   updateToner.printer = toner.printer;
   updateToner.ubication = toner.ubication;
   await updateToner.save();
+  console.log(updateToner);
+  await addTonerMovement(updateToner);
   return updateToner.model;
 };
 

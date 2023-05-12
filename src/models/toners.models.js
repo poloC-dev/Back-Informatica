@@ -16,13 +16,12 @@ const TonerSchema = new Schema({
   },
   printer: {
     type: String,
-    required: [true, "La impresora es requerida"],
   },
-  ubication:{
-    type:String,
-    required: [true,"Falta ubicacion"],
+  ubication: {
+    type: String,
+    required: [true, "Falta ubicacion"],
   },
-  created_at: { type: Date, default: new Date() },
+  created_at: { type: Date, default: Date() },
 });
 
 const TonerModel = model("Toner", TonerSchema);

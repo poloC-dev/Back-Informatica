@@ -9,6 +9,7 @@ const {
 const validator = require("../utils/validator");
 const getQuantityMiddleware = require("../utils/getQuantityMiddleware");
 const { body } = require("express-validator");
+const { addMovementController } = require("../controller/movementController");
 const router = express.Router();
 
 router.get("/toner", getTonerController);
@@ -55,4 +56,10 @@ router.post(
 );
 router.delete("/toner/:_id", deleteTonerController);
 
+router.post(
+  "movement",
+  body("description").exists().isString().isLength({ min: 0, max: 300 }),
+  validator,
+  addMovementController
+);
 module.exports = router;

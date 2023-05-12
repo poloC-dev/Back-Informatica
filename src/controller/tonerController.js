@@ -11,7 +11,6 @@ const addTonerController = async (req, res) => {
       message: `Se ha creado el toner ${addToner.brand} ${addToner.model}`,
     });
   } catch (error) {
-    console.log(error);
     res.json({ message: "Ya existe ese toner" });
   }
 };
