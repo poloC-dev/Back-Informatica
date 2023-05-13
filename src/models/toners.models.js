@@ -12,14 +12,12 @@ const TonerSchema = new Schema({
   },
   quantity: {
     type: Number,
-    require: [true, "La cantidad es requerida"],
   },
   printer: {
     type: String,
   },
   ubication: {
     type: String,
-    required: [true, "Falta ubicacion"],
   },
   created_at: { type: Date, default: Date() },
 });

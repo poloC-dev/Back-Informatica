@@ -11,7 +11,7 @@ const updateTonerService = async (req) => {
   updateToner.printer = toner.printer;
   updateToner.ubication = toner.ubication;
   await updateToner.save();
-  console.log(updateToner);
+
   await addTonerMovement(updateToner);
   return updateToner.model;
 };

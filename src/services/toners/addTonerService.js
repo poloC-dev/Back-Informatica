@@ -6,8 +6,7 @@ const addTonerService = async (req, res) => {
   toner.quantity = req.quantity;
   const newToner = new TonerModel(toner);
   await newToner.save();
-  console.log('nuevo toner service',newToner);
-  await addTonerMovement(newToner);
+  await addTonerMovement(toner);
   return toner;
 };
 

@@ -6,9 +6,9 @@ const MovementsSchema = new Schema({
 
   description: String,
 
-  startDate: Date, // Fecha de inicio
+  startDate: String, // Fecha de inicio
 
-  endDate: Date, // Fecha de finalización
+  endDate: String, // Fecha de finalización
 
   created_at: { type: Date, default: Date() },
 });

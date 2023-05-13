@@ -11,6 +11,7 @@ const addTonerController = async (req, res) => {
       message: `Se ha creado el toner ${addToner.brand} ${addToner.model}`,
     });
   } catch (error) {
+    console.log(error);
     res.json({ message: "Ya existe ese toner" });
   }
 };
@@ -51,7 +52,7 @@ const updateTonerController = async (req, res) => {
     res.json({ message: `Toner ${updatedToner} modificado con exito` });
   } catch (error) {
     console.log(error);
-    res.json({ message: "No existe ese toner" });
+    res.status(404).json({ message: "No existe ese toner" });
   }
 };
 
