@@ -14,6 +14,7 @@ const {
   getMovementController,
   getMovementByMovementIdController,
   deleteMovementController,
+  updateMovementController,
 } = require("../controller/movementController");
 const router = express.Router();
 
@@ -70,7 +71,7 @@ router.post(
   validator,
   addMovementController
 );
-router.put("/movement/:_id", validator, updateTonerController);
+router.put("/movement/:_id", validator, updateMovementController);
 router.delete("/movement/:_id", deleteMovementController);
 
 module.exports = router;
